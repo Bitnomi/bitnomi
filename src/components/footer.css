@@ -1,0 +1,79 @@
+.f-ft{
+   background-color: #212a35;
+   color: #fff;
+}
+
+.f-wrapper{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   vertical-align: baseline;
+   font: inherit;
+   font-size: 100%;
+   line-height: 1.4em;
+}
+
+.f-ft .color-line{
+   height: 6px;
+   background-image: linear-gradient(270deg,#ffc21e,#00c1ce);
+}
+
+.f-ft .ft-content{
+   overflow: hidden;
+   display: flex;
+   -webkit-box-pack: justify;
+   justify-content: space-between;
+   -webkit-box-align: center;
+   align-items: center;
+   color: #9b9b9b;
+   margin: 0 auto;
+   padding: 22px 30px 12.6px;
+   max-width: 1800px;
+}
+
+.f-ft .media-box .slogan {
+   font-size: 18px;
+   display: flex;
+   -webkit-box-align: center;
+   align-items: center;
+   color: #fff;
+   margin-top: -12px;
+}
+
+.ff-light {
+   font-family: PingFangSC-Light,Helvetica Neue,Helvetica,Arial,Microsoft YaHei;
+}
+.fs-24 {
+   font-size: 24px!important;
+}
+.mt-10 {
+   margin-top: 10px!important;
+}
+
+.mt-10 a{
+   padding-inline-end: 5%;
+}
+
+.f-ft .linksWrap{
+   overflow: hidden;
+   position: relative;
+}
+
+.f-ft .linksWrap .linkBox {
+   width: 180px;
+   float: left;
+   padding-block-start: 5%;
+   /* display: inline; */
+}
+
+.f-ft .linksWrap .boxTitle {
+   font-size: 16px;
+   margin-bottom: 21px;
+   color: #fff;
+}
+
+.f-ft .linksWrap a{
+   color: #9b9b9b;
+   display: block;
+   margin-bottom: 7px;
+}

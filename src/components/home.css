@@ -1,0 +1,115 @@
+.mainContainer{
+   position: relative;
+   height: 100%;
+}
+
+.homeContainer{
+   padding-bottom: 164pt;
+}
+
+h1, legend{
+   text-align: center;
+}
+
+/* ul, p{
+   padding: 20px;
+   padding-left: 10%;
+   padding-right: 10%;
+} */
+
+.motto{
+   /* text-align: center;
+   min-width: 70%;
+   font-size: 2em;
+   list-style: none; */
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.motto li{
+   /* display: inline;
+   padding-inline-end: 15%;
+   text-align: center; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   width: 336px;
+   overflow: hidden;
+}
+
+.font-gray{
+   font-size: 18px;
+   color: #999;
+}
+
+.font24{
+   font-size: 24px;
+}
+
+.aboutus {
+   padding-left: 20%;
+   padding-right: 20%;
+   /* background-color: black; */
+   text-align: center;
+   color: #fff;
+   height: 140pt;
+   background: #212a35;
+}
+
+.about-box .title-line .ff-thin {
+   font-size: 42px;
+   padding-top: 70px;
+   margin-bottom: 42px;
+   font-family: PingFangSC-Thin,Helvetica Neue,Helvetica,Arial,Microsoft YaHei;
+}
+
+.about-box .desc-line{
+   font-size: 16px;
+   line-height: 30px;
+   max-width: 1366px;
+   margin: 0 auto;
+}
+
+.footer {
+   text-align: center;
+   position: absolute;
+   left: 0; right: 0; bottom: 0;
+   background-color: #e8e8e8;
+}
+
+.footer-lol {
+   font-size: 2em;
+   font-family: Georgia;
+}
+
+ul#horizontal-list {
+   min-width: 70%;
+   list-style: none;
+   padding-top: 0px;
+}
+
+ul#horizontal-list li{
+   display: inline;
+   padding-inline-end: 5%;
+}
+
+ul.horizontal-social {
+   list-style: none;
+   padding-top: 0px;
+}
+
+ul.horizontal-social li{
+   display: inline;
+   padding-inline-end: 2%;
+}
+
+hr{
+   width: 60%;
+   color: black;
+}
+
+ul.horizontal-social>li.email {
+   padding-left: 40%;
+}
