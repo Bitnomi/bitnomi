@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import { Divider, Icon, Button, Alert } from 'antd';
 import { Col, Grid, Row } from 'react-bootstrap';
+import { Widget } from 'react-chat-widget';
+ 
+import 'react-chat-widget/lib/styles.css';
 import './UserProfile.css';
 
 export default class UserProfile extends Component {
     state = {
         warningMessage : "Please click \"I've Paid\" after you made the payment",
     };
+    componentDidMount() {
+        //addResponseMessage("Welcome to this awesome chat!");
+    }
+    
+    handleNewUserMessage = (newMessage) => {
+        console.log(`New message incomig! ${newMessage}`);
+        // Now send the message throught the backend API
+        //addResponseMessage(response);
+    }
+    
     render() {
         return (
             <Grid style={{paddingTop:'50px'}}>
@@ -85,7 +98,11 @@ export default class UserProfile extends Component {
                         </ol>    
                         <Button style={{color:'blue'}}>Cancel</Button>   
                     </Col>
-                    <Col md={4}></Col>
+                    <Col md={4}>
+                        <Widget
+                            handleNewUserMessage={this.handleNewUserMessage}
+                        />
+                    </Col>
                 </Row>
             </Grid>
         );
