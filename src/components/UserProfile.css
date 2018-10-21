@@ -1,0 +1,20 @@
+.pdL-0 {
+    padding-left: 0;
+}
+.pdR-0 {
+    padding-right: 0;
+}
+.msg{
+    font-weight: bold;
+}
+.timer{
+    color: red;
+}
+.refno{
+    border: 1px solid black;
+    padding: 2px;
+}
+.list{
+    padding: 15px;
+    line-height: 1.75;
+}
