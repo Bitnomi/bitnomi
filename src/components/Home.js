@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './home.css'
 // import { Modal, Button } from 'antd';
-import { Icon } from 'antd';
+import { Icon, Carousel } from 'antd';
 import MyTable from './table';
 import MyFooter from './footer';
 
@@ -20,6 +20,12 @@ class Home extends Component {
   render() {
     return (
       <div className="mainContainer">
+        <Carousel>
+          <div><img src="B:\Shall\work\devscore\ClientApp\public\2938.jpg" alt=""/></div>
+          <div><h3>2</h3></div>
+          <div><h3>3</h3></div>
+          <div><h3>4</h3></div>
+          </Carousel>
       <div className="homeContainer">
         <h1>Welcome to DevScore your home to crypto!</h1>
 
