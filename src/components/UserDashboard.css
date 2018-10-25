@@ -1,0 +1,14 @@
+.card-style{
+    background: #4040b1;
+    color: white;
+    border-radius: 5px;
+}
+.ant-card-meta-title, .ant-card-meta-description{
+    color: white;
+}
+.col-md-3{
+    padding-left: 0;
+}
+.pdT-20{
+    padding-top: 20px;
+}
