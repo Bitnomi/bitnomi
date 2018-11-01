@@ -1,0 +1,31 @@
+.ant-card-meta-title{
+    color: black;
+}
+
+.ant-card-meta-description{
+    color: darkgray;
+}
+
+.ant-card-grid:hover{
+    box-shadow: none;
+}
+
+.ant-card-grid{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.alignCenter{
+    text-align: center;
+}
+
+.alignRight{
+    text-align: right;
+}
+
+.cardStyle{
+    margin-left:50px;
+    border-radius: 8px;
+    box-shadow: 5px 6px 20px #e6e6e6;
+    max-width: 900px;
+}

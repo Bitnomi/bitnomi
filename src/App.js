@@ -6,6 +6,7 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import UserProfile from './components/UserProfile';
 import UserDashboard from './components/UserDashboard';
+import Account from './components/Account';
 
 export default class App extends Component {
   displayName = App.name
@@ -18,6 +19,7 @@ export default class App extends Component {
         <Route path='/fetchdata' component={FetchData} />
         <Route path='/userprofile' component={UserProfile} />
         <Route path='/userdashboard' component={UserDashboard} />
+        <Route path='/account' component={Account} />
       </Layout>
     );
   }
