@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
-import { Card, Layout, Avatar, Divider, Icon } from 'antd';
+import React, { Component } from 'react';
+import { Card, Layout, Avatar, Divider, Icon, Switch} from 'antd';
 import './account.css';
 
 const gridStyle = {
   width: '33.33%'
 };
 
+const gridStyleNotif = {
+    width:'50%'
+}
 
 export default class Account extends Component {
     render(){
@@ -30,7 +33,7 @@ export default class Account extends Component {
                     </Card>
                 </Sider>
                 <Content>
-                    <Card title="Account & Security" className='cardStyle' style={{maxWidth:'900px'}}>
+                    <Card title="Account & Security" className='cardStyle'>
                         <Grid style={gridStyle}><Icon type="mail" theme="outlined" />&nbsp;Email</Grid>
                         <Grid style={gridStyle}>Bound</Grid>
                         <Grid style={gridStyle} className='alignRight'><a>Close</a></Grid>
@@ -50,6 +53,36 @@ export default class Account extends Component {
                         <Grid style={gridStyle}><Icon type="lock" theme="outlined" />&nbsp;Trade Password</Grid>
                         <Grid style={gridStyle}>*****</Grid>
                         <Grid style={gridStyle} className='alignRight'><a>Reset</a></Grid>
+                    </Card>
+                    <Card title="ID Verification" className='cardStyle' style={{marginTop:'15px'}}>
+                        <Grid style={gridStyle}><Icon type="idcard" theme="outlined" />&nbsp;ID Verification</Grid>
+                        <Grid style={gridStyle}>Arnold, 11*****1</Grid>
+                        <Grid style={gridStyle} className='alignRight'>Verified</Grid>
+                        <Divider style={{margin:'0'}} />
+                        <Grid style={gridStyle}><Icon type="user" theme="outlined" />&nbsp;Advance Verification</Grid>
+                        <Grid style={gridStyle}>Unverified</Grid>
+                        <Grid style={gridStyle} className='alignRight'><a>Verify</a></Grid>                        
+                    </Card>
+                    <Card title="Payment Method" className='cardStyle' style={{marginTop:'15px'}}>
+                        <Grid style={gridStyle}>Bank Accounr</Grid>
+                        <Grid style={gridStyle}>Arnold, 11*****1</Grid>
+                        <Grid style={gridStyle} className='alignRight'><a>Modify</a>&nbsp;<Switch checkedChildren="On" unCheckedChildren="Off" defaultChecked /></Grid>
+                        <Divider style={{margin:'0'}} />
+                        <Grid style={gridStyle}></Grid>
+                        <Grid style={gridStyle}></Grid>
+                        <Grid style={gridStyle} className='alignRight'><a>Add a new payment method</a></Grid>                        
+                    </Card>
+                    <Card title="Block List" className='cardStyle' style={{marginTop:'15px'}}>
+                        <Grid style={gridStyle}></Grid>
+                        <Grid style={gridStyle}>No More Recods</Grid>
+                        <Grid style={gridStyle}></Grid>                      
+                    </Card>
+                    <Card title="Notifications" className='cardStyle' style={{marginTop:'15px'}}>
+                        <Grid style={gridStyleNotif}>Receive email Notifications</Grid>
+                        <Grid style={gridStyleNotif} className='alignRight'><Switch checkedChildren="On" unCheckedChildren="Off" defaultChecked /></Grid>
+                        <Divider style={{margin:'0'}} />
+                        <Grid style={gridStyleNotif}>Receive SMS Notifications</Grid>
+                        <Grid style={gridStyleNotif} className='alignRight'><Switch checkedChildren="On" unCheckedChildren="Off" /></Grid>                       
                     </Card>
                 </Content>
             </Layout>
