@@ -7,6 +7,7 @@ import { Counter } from './components/Counter';
 import UserProfile from './components/UserProfile';
 import UserDashboard from './components/UserDashboard';
 import Account from './components/Account';
+import PostTrade from './components/PostTrade';
 
 export default class App extends Component {
   displayName = App.name
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route path='/userprofile' component={UserProfile} />
         <Route path='/userdashboard' component={UserDashboard} />
         <Route path='/account' component={Account} />
+        <Route path='/post-trade' component={PostTrade} />
       </Layout>
     );
   }
