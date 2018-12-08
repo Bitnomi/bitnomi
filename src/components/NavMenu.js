@@ -5,6 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import './NavMenu.css';
 import 'antd/dist/antd.css';
 import { Menu, Icon } from 'antd';
+import Home from './Home.js'
 
 //const SubMenu = Menu.SubMenu;
 //const MenuItemGroup = Menu.ItemGroup;
@@ -63,7 +64,7 @@ export class NavMenu extends Component {
   render() {
     return (
       <Menu onClick = {this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-        <LinkContainer to={'/'} exact>
+        <LinkContainer to={'/Home'} exact>
           <Menu.Item key="home">
             <Icon type= "home" /> Home
           </Menu.Item>
