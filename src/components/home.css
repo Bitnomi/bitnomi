@@ -113,3 +113,12 @@ hr{
 ul.horizontal-social>li.email {
    padding-left: 40%;
 }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+   display: block;
+   height: 800px;
+   min-width: 100%;
+   width: 100%;
+   max-width: 100%;
+   line-height: 1;
+}

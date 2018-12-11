@@ -1,11 +1,13 @@
 ﻿import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './NavMenu.css';
 import 'antd/dist/antd.css';
 import { Menu, Icon } from 'antd';
 import Home from './Home.js'
+import FetchData from './FetchData'
+import Counter from './Counter'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //const SubMenu = Menu.SubMenu;
 //const MenuItemGroup = Menu.ItemGroup;
@@ -64,23 +66,28 @@ export class NavMenu extends Component {
   render() {
     return (
       <Menu onClick = {this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-        <LinkContainer to={'/Home'} exact>
-          <Menu.Item key="home">
-            <Icon type= "home" /> Home
-          </Menu.Item>
-        </LinkContainer>
-        
-        <LinkContainer to={'/counter'}>
-          <Menu.Item key="counter">
-          <Icon type="dashboard" /> counter
-          </Menu.Item>
-        </LinkContainer>
-          
-        <LinkContainer to ={'/fetchdata'}>
-          <Menu.Item key="fetchdata">
-          <Icon type="setting" /> FetchData
-          </Menu.Item>
-        </LinkContainer>
+       
+       <Menu.Item>
+        <Link to="/">
+        <Icon type="home" />
+        Home
+        </Link>          
+        </Menu.Item>
+        <Menu.Item>
+
+        <Link to="/counter">
+        <Icon type='dashboard' />
+        Counter
+        </Link>
+</Menu.Item>
+        <Menu.Item>
+
+        <Link to="/fetchdata">
+        <Icon type='setting' />
+        Fetchdata
+        </Link>
+</Menu.Item>
+
       </Menu>
     );
   }
