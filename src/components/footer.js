@@ -2,6 +2,7 @@ import React from 'react';
 import './footer.css';
 import { ftruncate } from 'fs';
 import { Icon } from 'antd';
+import { Link } from 'react-router-dom'
 
 class MyFooter extends React.Component{
    render(){
@@ -37,7 +38,11 @@ class MyFooter extends React.Component{
                         <p className="boxTitle">
                            About
                         </p>
-                        <a href="#" target="_self">About us</a>
+                        <a href="#" target="_self">
+                        <Link to='/about'>
+                        About us
+                        </Link>
+                        </a>
                         <a rel="noopener" href="#" target="_blank">Join us</a>
                         <a rel="noopener" href="#" target="_blank">About CET</a>
                      </div>

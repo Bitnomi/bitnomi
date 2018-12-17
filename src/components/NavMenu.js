@@ -3,7 +3,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import "./NavMenu.css";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
-import { Button } from "antd";
+import { Button, Menu, Icon, Dropdown } from "antd";
 //const SubMenu = Menu.SubMenu;
 //const MenuItemGroup = Menu.ItemGroup;
 
@@ -52,6 +52,10 @@ export class NavMenu extends Component {
     return <LinkContainer to={`/${this.state.current}`} />;
   };
 
+  handleMenuClick = e => {
+    console.log("click", e);
+  };
+
   displayName = NavMenu.name;
 
   render() {
@@ -61,17 +65,7 @@ export class NavMenu extends Component {
           <li className="nav-item">
             <Link to="/">Bitonami</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/">Home</Link>
-          </li>
 
-          <li className="nav-item">
-            <Link to="/counter">Counter</Link>
-          </li>
-
-          <li className="nav-item">
-            <Link to="/fetchdata">Fetchdata</Link>
-          </li>
           <li className="nav-item">
             <Link to="/counter">Market</Link>
           </li>
@@ -80,11 +74,32 @@ export class NavMenu extends Component {
             <Link to="/fetchdata">Create an ad</Link>
           </li>
         </ul>
-        <ul className="nav navbar-nav ml-auto">
+        <ul className="nav ml-auto">
           <li>
-            <Link to="/">
-              <Button type="primary">Login</Button>
-            </Link>
+            <div className="nav-item dropdown">
+              <button
+                className="btn btn-primary dropdown-toggle"
+                type="button"
+                id="dropdownMenu1"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Chinese
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">
+                  English
+                </a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="nav-item">
+              <Link to="/">
+                <button className="btn btn-primary">Login</button>
+              </Link>
+            </div>
           </li>
         </ul>
       </nav>

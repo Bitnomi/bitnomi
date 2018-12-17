@@ -4,31 +4,15 @@ import { Button, Menu, Card, Icon, Layout, Row, Col } from "antd";
 
 import "antd/dist/antd.css";
 
-import "./styles.css";
+//import "./styles.css";
+import ActionButton from "antd/lib/modal/ActionButton";
 const { Header, Footer, Sider, Content } = Layout;
 
-function App() {
+const About = () => {
   return (
     <div className="App">
       <Layout>
-        <Menu mode="horizontal">
-          <Row>
-            <Col offset={18}>
-              <Button type="primary" style={{ borderRadius: "50px" }} ghost>
-                {" "}
-                sign in{" "}
-              </Button>
-              <Button
-                type="danger"
-                style={{ borderRadius: "50px", marginLeft: "10px" }}
-                ghost
-              >
-                {" "}
-                sign up{" "}
-              </Button>
-            </Col>
-          </Row>
-        </Menu>
+       
         <Row
           style={{
             background: "#75cac3",
@@ -112,5 +96,4 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default About;

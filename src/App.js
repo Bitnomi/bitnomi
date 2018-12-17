@@ -8,6 +8,7 @@ import UserDashboard from './components/UserDashboard';
 import Account from './components/Account';
 import PostTrade from './components/PostTrade';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import About from './components/About'
 
 export default class App extends Component {
   displayName = App.name
@@ -23,6 +24,7 @@ export default class App extends Component {
         <Route path='/userdashboard' component={UserDashboard} />
         <Route path='/account' component={Account} />
         <Route path='/post-trade' component={PostTrade} />
+        <Route path='/about' component={About} />
       </Layout>
       </Router>
     );
