@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import Home from './components/Home';
 import { FetchData } from './components/FetchData';
@@ -8,12 +7,14 @@ import UserProfile from './components/UserProfile';
 import UserDashboard from './components/UserDashboard';
 import Account from './components/Account';
 import PostTrade from './components/PostTrade';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class App extends Component {
   displayName = App.name
 
   render() {
     return (
+      <Router>
       <Layout>
         <Route exact path='/' component={Home} />
         <Route path='/counter' component={Counter} />
@@ -23,6 +24,7 @@ export default class App extends Component {
         <Route path='/account' component={Account} />
         <Route path='/post-trade' component={PostTrade} />
       </Layout>
+      </Router>
     );
   }
 }

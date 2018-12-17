@@ -8,19 +8,18 @@
 .navbar .navbar-nav .active a:focus {
     background-image: none;
     background-color: #4189C7;
-    color: white;
+    color: black;
 }
 
 @media (min-width: 768px) {
     /* On large screens, convert the nav menu to a vertical sidebar */
     .navbar {
-        height: 100%;
-        width: calc(25% - 20px);
-    }
-    .navbar {
         border-radius: 0;
         border-width: 0;
         height: 100%;
+        width: 73px;
+        margin-bottom: 0px;
+        z-index:10;
     }
     .navbar-header {
         float: none;
@@ -55,4 +54,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+.Navbarstyle{
+    background: transparent;
+    color: #444;
 }

@@ -1,10 +1,20 @@
 .mainContainer{
    position: relative;
    height: 100%;
+   width: 100%;
+   min-width: 100%;
 }
 
 .homeContainer{
    padding-bottom: 164pt;
+   width: 100%;
+   min-width: 100%;
+}
+
+.carouselcontainer{
+   min-width: 100%;
+   width: 100%;
+   margin-top: -75px;
 }
 
 h1, legend{
@@ -122,3 +132,18 @@ ul.horizontal-social>li.email {
    max-width: 100%;
    line-height: 1;
 }
+
+.Navbarstyle{
+   width: 100%;
+   min-width: 100%;
+}
+
+.navbar-nav {
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-direction: row;
+   flex-direction: row;
+   padding-left: 0;
+   margin-bottom: 0;
+   list-style: none;
+ }

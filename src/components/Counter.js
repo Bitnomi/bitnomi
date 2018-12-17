@@ -17,7 +17,7 @@ export class Counter extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: 'relative', height: '100%' }}>
         <h1>Counter</h1>
 
         <p>This is a simple example of a React component.</p>
