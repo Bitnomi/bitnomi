@@ -71,7 +71,7 @@ export class NavMenu extends Component {
           </li>
 
           <li className="nav-item">
-            <Link to="/fetchdata">Create an ad</Link>
+            <Link to="/post-trade">Create an ad</Link>
           </li>
         </ul>
         <ul className="nav ml-auto">
