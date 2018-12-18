@@ -96,7 +96,7 @@ export class NavMenu extends Component {
           </li>
           <li>
             <div className="nav-item">
-              <Link to="/">
+              <Link to="/userprofile">
                 <button className="btn btn-primary">Login</button>
               </Link>
             </div>
