@@ -1,6 +1,7 @@
 import React from "react";
 import { Table, Button, Dropdown, Menu, Icon } from "antd";
 import "./table.css";
+import { Link } from 'react-router-dom'
 
 class MyTable extends React.Component {
   constructor(props) {
@@ -91,7 +92,7 @@ class MyTable extends React.Component {
       dataSource: [
         {
           key: "1",
-          User_Name: "Bill Gates",
+          User_Name: <Link to='/userdashboard'> Bill Gates </Link>,
           Credibility: "Transaction 412 Positive 190 Negative 0",
           Payment_Methods: "Card",
           Quota: "1,000 - 1,887CNY",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Button, Tag, Avatar } from 'antd';
+import { Link } from 'react-router-dom'
 
 const columns = [{
   title: 'Coin',
@@ -37,7 +38,7 @@ const columns = [{
   key: 'control',
   render: (text, record) => (
     <span>
-    <Button type="primary">Sell</Button>
+    <Link to='/userprofile'><Button type="primary">Sell</Button></Link>
     </span>
   ),
 }];

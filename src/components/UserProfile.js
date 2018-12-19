@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Divider, Icon, Button, Alert } from 'antd';
 import { Col, Grid, Row } from 'react-bootstrap';
 import { Widget } from 'react-chat-widget';
- 
+import { Link } from 'react-router-dom' 
+
 import 'react-chat-widget/lib/styles.css';
 import './UserProfile.css';
 
