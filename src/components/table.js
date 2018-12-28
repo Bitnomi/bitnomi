@@ -84,8 +84,13 @@ class MyTable extends React.Component {
         },
         {
           title: "Currency type",
-          dataIndex: "buyButton",
-          key: "butButton"
+          // dataIndex: "buyButton",
+          key: "buyButton",
+          render:()=>(
+            <span>
+              <Button type="primary" onClick={this.props.onClickFunc}>BUY ETH</Button>
+            </span>
+          )
         }
       ],
 
@@ -99,7 +104,7 @@ class MyTable extends React.Component {
           Amount: "1.25923405 ETH",
           Selling_Price: "1,498.53 CNY",
           price: "130.00CAD",
-          buyButton: <Button type="primary">Buy ETH</Button>
+          // buyButton: <Button type="primary">Buy ETH</Button>
         },
         {
           key: "2",
@@ -109,8 +114,8 @@ class MyTable extends React.Component {
           Quota: "1,234 - 1,887CNY",
           Amount: "22.45ETH",
           Selling_Price: "1,498.53 CNY",
-          price: "130.00CAD",
-          buyButton: <Button type="primary">Buy ETH</Button>
+          price: "130.00CAD"
+          // buyButton: <Button type="primary">Buy ETH</Button>
         }
       ]
     };

@@ -1,21 +1,37 @@
 import React, { Component } from "react";
 import "./home.css";
-// import { Modal, Button } from 'antd';
-import { Icon, Button } from "antd";
+import { Icon, Button, Modal } from "antd";
 import MyTable from "./table";
 import MyFooter from "./footer";
-import { NavMenu } from './NavMenu';
 import { Carousel } from "react-bootstrap";
-import FetchData from './FetchData'
-import Counter from './Counter'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      loading: false,
+      visible: false
+    };
   }
   displayName = Home.name;
+
+  handleClick = ()=>{
+    console.log('clicked');
+    this.setState({
+      visible: true,
+    });
+  }
+
+  handleOk = () => {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false, visible: false });
+    }, 3000);
+  }
+
+  handleCancel = () => {
+    this.setState({ visible: false });
+  }
 
   render() {
     return (
@@ -79,7 +95,7 @@ class Home extends Component {
             </div>
             <h1>Welcome to DevScore your home to crypto!</h1>
 
-            <MyTable />
+            <MyTable onClickFunc={this.handleClick} />
 
             <ul className="motto">
               <li>
@@ -125,7 +141,25 @@ class Home extends Component {
                 </span>
               </div>
             </div>
-          </div>
+            <Modal
+              visible={this.state.visible}
+              title="Title"
+              onOk={this.handleOk}
+              onCancel={this.handleCancel}
+              footer={[
+                <Button key="back" onClick={this.handleCancel}>Return</Button>,
+                <Button key="submit" type="primary" loading={this.state.loading} onClick={this.handleOk}>
+                  Submit
+                </Button>,
+              ]}
+            >
+                <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+            </Modal>
+            </div>
           <div className="footer">
             <div className="footer-lol">Devscore Coin</div>
             <MyFooter />
