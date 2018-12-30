@@ -1,21 +1,77 @@
 import React, { Component } from "react";
 import "./home.css";
-// import { Modal, Button } from 'antd';
-import { Icon, Button } from "antd";
+import { Icon, Button, Modal, Row, Col, Divider, Input } from "antd";
 import MyTable from "./table";
 import MyFooter from "./footer";
-import { NavMenu } from './NavMenu';
 import { Carousel } from "react-bootstrap";
-import FetchData from './FetchData'
-import Counter from './Counter'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+const HomeModal = (props) => {
+  return(
+    <Modal
+      visible={props.visible}
+      onOk={props.handleOk}
+      onCancel={props.handleCancel}
+      footer={[
+        <Button key="back" onClick={props.handleCancel}>Cancel</Button>,
+        <Button key="submit" type="primary" loading={props.loading} onClick={props.handleOk}>
+          Determine
+        </Button>
+      ]}
+      width="750px"
+    >
+      <h3 style={{"textAlign":"center"}}>Confirm purchase BTC</h3>
+      <h4>Confirmation Infromation</h4>
+      <Divider/>
+      <Row>
+        <Col span={8}>Unit price: <span className="font-black-modal">5100.00</span> CNY/BCH</Col>
+        <Col span={8}>limit: <span className="font-black-modal">100.00-500000.00</span> CNY</Col>
+        <Col span={8}>Payment method: <span className="font-black-modal">bank card</span></Col>
+      </Row>
+      <br/>
+      <Row>
+        <Col span={11}>Can buy upto 509.37 CNY to buy &nbsp; &nbsp; <a href="#">all</a></Col>
+        <Col span={2}></Col>
+        <Col span={11}>Can buy upto 509.37 BCH to buy &nbsp; &nbsp; <a href="#">all purchases</a></Col>
+      </Row>
+      <Row>
+        <Col span={11}><Input placeholder="01202214" suffix="CNY"/></Col>
+        <Col span={2} style={{textAlign:"center"}}><Icon type="swap" /></Col>
+        <Col span={11}><Input placeholder="01202214" suffix="BCH"/></Col>
+      </Row>
+      <br />
+      
+      <p style={{fontSize:"12px", color:"grey"}}>*Submit the order to generate the order, please complete the payment within 15 minutes. <a href="#">More Trading Infromation ></a></p>
+    </Modal>
+  )
+}
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      loading: false,
+      visible: false
+    };
   }
   displayName = Home.name;
+
+  handleClick = ()=>{
+    console.log('clicked');
+    this.setState({
+      visible: true,
+    });
+  }
+
+  handleOk = () => {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false, visible: false });
+    }, 3000);
+  }
+
+  handleCancel = () => {
+    this.setState({ visible: false });
+  }
 
   render() {
     return (
@@ -79,7 +135,7 @@ class Home extends Component {
             </div>
             <h1>Welcome to DevScore your home to crypto!</h1>
 
-            <MyTable />
+            <MyTable onClickFunc={this.handleClick} />
 
             <ul className="motto">
               <li>
@@ -125,7 +181,8 @@ class Home extends Component {
                 </span>
               </div>
             </div>
-          </div>
+            <HomeModal visible={this.state.visible} loading={this.state.loading} handleCancel={this.handleCancel} handleOk={this.handleOk} />
+            </div>
           <div className="footer">
             <div className="footer-lol">Devscore Coin</div>
             <MyFooter />
